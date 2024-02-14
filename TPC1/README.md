@@ -1,7 +1,7 @@
 #TPC1: Análise de um Dataset
 
 ##Autor
-Hugo Abelheira (a95151)
+Hugo Abelheira (A95151)
 
 ##Desenvolvimento
 Neste trabalho fiz a leitura e processamento dos dados contidos num ficheiro csv fornecido pelos docentes.
