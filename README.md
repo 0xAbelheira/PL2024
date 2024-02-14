@@ -1,7 +1,7 @@
-## PL2024
+# PL2024
 
-# Introdução
+## Introdução
 TPCs de PL do ano 2024
 
-# Feito por
+## Feito por
 Hugo Abelheira (a95151)
