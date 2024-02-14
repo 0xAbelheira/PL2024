@@ -3,5 +3,5 @@
 ## Introdução
 TPCs de PL do ano 2024
 
-## Feito por
+## Autor
 Hugo Abelheira (a95151)
