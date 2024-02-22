@@ -4,12 +4,6 @@
 Hugo Abelheira (A95151)
 
 testes:
-1. um
-2. dois
-
-
-
-
-
-
-3. tres
+1 um
+2 dois
+3 tres
