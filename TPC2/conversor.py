@@ -9,9 +9,9 @@ def conversor(line):
     # o itálico é idêntico ao bold mas com apenas um asterisco ou um underscore ('*' ou '_')
     re_it = r"(\*|__)([^ *])(.*)\2\1"
     
-    re_nl =
-    re_link =
-    re_img =
+    re_nl = r"^\d\..*"
+    re_link = r""
+    re_img = r""
     
     # notar que em relação ao bold e ao itálico, o conversor devia "captar" os simbolos a mais e fazer com que desapareçam, neste conversor estou a ignorá-los apenas
 
