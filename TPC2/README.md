@@ -5,5 +5,5 @@ Hugo Abelheira (A95151)
 
 testes:
 
-[](https://www.youtube.com/watch?v=2QRg9ZNEPFwab_channel=EthansBroadcast)
-!(imagem.avif)
+[link](https://www.youtube.com/watch?v=2QRg9ZNEPFwab_channel=EthansBroadcast)
+![](imagem.avif)
