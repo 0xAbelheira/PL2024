@@ -4,7 +4,7 @@
 Hugo Abelheira (A95151)
 
 testes:
-***ola***
-**********ola**********
-****
-**
+1. um
+2.dois
+
+3.tres

@@ -5,12 +5,15 @@ def conversor(line):
     # um heading é todo o texto que vem depois de um ou mais '#' (com pelo menos um espaço entre eles, até 6 níveis de heading)
     re_heading = r"^(#+)\s(.*)" 
     # um bold é todo o texto entre '**' ou '__' tendo em conta que não pode haver espaços a separar estes simbolos do inicio e do fim da string
-    re_bold = r"(\*\*|__)([^ ])(.*?)\2\1"
+    re_bold = r"(\*\*|__)([^ *])(.*?)\2\1"
     # o itálico é idêntico ao bold mas com apenas um asterisco ou um underscore ('*' ou '_')
-    re_it = r"(\*|__)([^ ])(.*)\2\1"
+    re_it = r"(\*|__)([^ *])(.*)\2\1"
+    
     re_nl =
     re_link =
     re_img =
+    
+    # notar que em relação ao bold e ao itálico, o conversor devia "captar" os simbolos a mais e fazer com que desapareçam, neste conversor estou a ignorá-los apenas
 
 def main():
     input_path = sys.argv[1] # ler a path do ficheiro de input
