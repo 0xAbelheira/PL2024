@@ -5,7 +5,7 @@ def conversor(line):
     # um heading é todo o texto que vem depois de um ou mais '#' (com pelo menos um espaço entre eles, até 6 níveis de heading)
     re_heading = r"^(#+)\s(.*)" 
     # um bold é todo o texto entre '**' ou '__' tendo em conta que não pode haver espaços a separar estes simbolos do inicio e do fim da string
-    re_bold = r"(\*\*|__)([^ ])(.*)\2\1"
+    re_bold = r"(\*\*|__)([^ ])(.*?)\2\1"
     # o itálico é idêntico ao bold mas com apenas um asterisco ou um underscore ('*' ou '_')
     re_it = r"(\*|__)([^ ])(.*)\2\1"
     re_nl =
