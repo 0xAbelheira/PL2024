@@ -82,11 +82,16 @@ def t_error(token):
 
 lexer = lex.lex()
 
-while True:
-    line = input("\nDigite uma linha (Ctrl+C para sair):\n")
+try:
+    while True:
+        line = input("\nDigite uma linha (Ctrl+C para sair):\n")
 
-    # inserir a linha no lexer
-    lexer.input(line)
+        # inserir a linha no lexer
+        lexer.input(line)
 
-    for token in lexer:
-        print(token)
+        for token in lexer:
+            print(token)
+
+except KeyboardInterrupt:
+    # Ctrl+c para sair
+    print("\nPrograma terminado!")
