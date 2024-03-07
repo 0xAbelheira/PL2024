@@ -51,7 +51,6 @@ def t_NUMBER(token):
 def t_COMMAND(token):
     r"\b\w+(\s+(?i:by|join))?\b"
     token_val = token.value.lower()
-    #token.type = reserved.get(token_val, "COMMAND") if to_lower in commands else "ATTRIBUTE"
     if token_val in commands:
         token.type = commands[token_val]
     else:
