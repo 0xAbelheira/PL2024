@@ -1,0 +1,12 @@
+Simbolos Terminais:
+T = {num, var, op, par, cmd}
+num = [0-9]+
+var = [A-Za-z]+[0-9]*
+op = [+\-*/]
+par = [\(\)]
+cmd = ? | !
+
+Simbolos Não-Terminais:
+N = {}
+
+
