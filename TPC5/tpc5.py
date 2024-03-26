@@ -10,7 +10,8 @@ tokens = (
     'SAIR',
     'ADD',
     'REMOVE',
-    'UPDATE'
+    'UPDATE',
+    'HELP'
 )
 
 t_LISTAR = r'\bLISTAR\b'
@@ -37,6 +38,10 @@ def t_REMOVE(t):
 
 def t_UPDATE(t):
     r'\bUPDATE\b'
+    return t
+
+def t_HELP(t):
+    r'\bHELP\b'
     return t
     
 def t_newline(t):
@@ -101,6 +106,17 @@ def update(stock):
         print("maq: Produto atualizado com sucesso.")
     else:
         print("maq: Produto não encontrado.")
+
+def help():
+    print("maq: Comandos disponíveis:")
+    print("- LISTAR: Lista todos os produtos no stock.")
+    print("- MOEDA <valor>: Adiciona moedas ao saldo da máquina. Exemplo: MOEDA 1E, 50C")
+    print("- SELECIONAR <código>: Seleciona um produto para compra. Exemplo: SELECIONAR ABC123")
+    print("- ADD: Adiciona um novo produto ao stock.")
+    print("- REMOVE <código>: Remove um produto do estoque. Exemplo: REMOVE ABC123")
+    print("- UPDATE: Atualiza as informações de um produto no estoque.")
+    print("- HELP: Mostra esta mensagem de ajuda.")
+    print("- SAIR: Sai da aplicação.")
 
 def listar_stock(stock):
     header = "cod | nome | quantidade |  preço"
@@ -185,6 +201,8 @@ def token_parser(stock, saldo, t):
         print("maq: Produto atualizado: ")
         listar_stock(stock)
         save_stock(stock, "stock.json")
+    elif t.type == 'HELP':
+        help()
     return stock, saldo
 
 
@@ -219,4 +237,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
