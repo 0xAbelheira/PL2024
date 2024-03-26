@@ -13,19 +13,19 @@ A máquina está sempre à espera de input e quando captura um token que corresp
 A base de dados (o stock) é mantida num ficheiro json e atualizada em runtime durante a execução da máquina, não permitindo a venda de produtos cujo stock já tenha terminado e assegurando que alterações (como novos produtos ou remoção de outros) no stock sejam também tidos em conta durante a interação com o utilizador.
 
 ### Funcionalidades
-Listar Stock (LISTAR): Visualizar os produtos disponíveis na máquina, incluindo código, nome, quantidade e preço de cada produto.
+- Listar Stock (LISTAR): Visualizar os produtos disponíveis na máquina, incluindo código, nome, quantidade e preço de cada produto.
 
-Inserir Moeda (MOEDA): Os usuários podem inserir moedas na máquina, atualizando seu saldo. A máquina aceita apenas moedas válidas.
+- Inserir Moeda (MOEDA): Os usuários podem inserir moedas na máquina, atualizando seu saldo. A máquina aceita apenas moedas válidas.
 
-Selecionar Produto (SELECIONAR): Permite selecionar um produto para compra. Se o saldo for suficiente e houver stock disponível, o produto é dispensado e o saldo é atualizado.
+- Selecionar Produto (SELECIONAR): Permite selecionar um produto para compra. Se o saldo for suficiente e houver stock disponível, o produto é dispensado e o saldo é atualizado.
 
-Adicionar Produto (ADD): Adicionar um novo produto ao stock da máquina.
+- Adicionar Produto (ADD): Adicionar um novo produto ao stock da máquina.
 
-Remover Produto (REMOVE): Remover um produto do stock da máquina.
+- Remover Produto (REMOVE): Remover um produto do stock da máquina.
 
-Atualizar Produto (UPDATE): Atualizar informações de um produto existente no estoque.
+- Atualizar Produto (UPDATE): Atualizar informações de um produto existente no estoque.
 
-Ajuda (HELP): Permite visualizar todos os comandos disponíveis.
+- Ajuda (HELP): Permite visualizar todos os comandos disponíveis.
 
 ### Utilização
 Para executar a MVA, basta correr a script Python tpc5.py. O utilizador deve começar pelo comando help, para ter acesso aos comandos existentes bem como os seus argumentos.
