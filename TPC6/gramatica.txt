@@ -1,4 +1,4 @@
-Simbolos Terminais:
+Símbolos Terminais:
 T = {num, var, eq, opA, opM, pa, pf, read, write}
 num = r'(+|-)?[0-9]+'
 var = r'[A-Za-z]+[0-9]*'
@@ -10,7 +10,7 @@ pf = r')'
 read = r'?'
 write = r'!'
 
-Simbolos Não-Terminais:
+Símbolos Não-Terminais:
 N = {Cmd, Exp, Term, Factor}
 
 Axioma:
@@ -29,7 +29,7 @@ p4) Factor -> pa Exp pf
            | var
            | num
 
-Lookahead's de cada element de N:
+Lookahead's de cada elemento de N:
 Cmd = {var, read, write}
 Exp = {pa, var, num}
 Term = {pa, var, num}
