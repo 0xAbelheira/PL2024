@@ -1,12 +1,37 @@
 Simbolos Terminais:
-T = {num, var, op, par, cmd}
-num = [0-9]+
-var = [A-Za-z]+[0-9]*
-op = [+\-*/]
-par = [\(\)]
-cmd = ? | !
+T = {num, var, eq, opA, opM, pa, pf, read, write}
+num = r'(+|-)?[0-9]+'
+var = r'[A-Za-z]+[0-9]*'
+eq = r'='
+opA = r'[+\-]'
+opM = r'[*/]'
+pa = r'('
+pf = r')'
+read = r'?'
+write = r'!'
 
 Simbolos Não-Terminais:
-N = {}
+N = {Cmd, Exp, Term, Factor}
 
+Axioma:
+S = Cmd
+
+Regras de Producao:
+p1) Cmd -> var eq Exp
+        | read var
+        | write Exp
+        | ε
+p2) Exp -> Term opA Exp
+        | Term
+p3) Term -> Factor opM Term
+        | Factor
+p4) Factor -> pa Exp pf 
+           | var
+           | num
+
+Lookahead's de cada element de N:
+Cmd = {var, read, write}
+Exp = {pa, var, num}
+Term = {pa, var, num}
+Factor = {pa, var, num}
 
