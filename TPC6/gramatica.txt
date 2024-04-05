@@ -18,16 +18,16 @@ S = Cmd
 
 Regras de Producao:
 p1) Cmd -> var eq Exp
-        | read var
-        | write Exp
-        | ε
-p2) Exp -> Term opA Exp
-        | Term
-p3) Term -> Factor opM Term
-        | Factor
-p4) Factor -> pa Exp pf 
-           | var
-           | num
+p2)     | read var
+p3)     | write Exp
+p4)     | ε
+p5) Exp -> Term opA Exp
+p6)      | Term
+p7) Term -> Factor opM Term
+p8)       | Factor
+p9) Factor -> pa Exp pf 
+p10)       | var
+p11)       | num
 
 Lookahead's de cada elemento de N:
 Cmd = {var, read, write}
